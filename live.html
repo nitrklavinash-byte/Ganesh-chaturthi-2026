@@ -9,7 +9,7 @@
 <meta name="theme-color" content="#2b080b">
 
 <style>
- * {
+* {
   box-sizing: border-box;
 }
 
@@ -18,9 +18,9 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+  min-width: 0;
   background: #2b080b;
+  overflow-x: hidden;
 }
 
 body {
@@ -41,58 +41,94 @@ body {
   display: block;
   width: 100%;
   height: auto;
-  max-width: none;
   margin: 0;
   padding: 0;
 }
 
-/* MOBILE */
+/* ================================
+   CONTRIBUTION CLICK AREA
+   ================================ */
+
+.contribute-link {
+  position: absolute;
+
+  /*
+    This is positioned over the
+    CONTRIBUTION button in the artwork.
+  */
+  left: 4%;
+  top: 76%;
+  width: 92%;
+  height: 10%;
+
+  display: block;
+
+  z-index: 9999;
+
+  cursor: pointer;
+  pointer-events: auto;
+  touch-action: manipulation;
+
+  text-decoration: none;
+
+  /*
+    Almost invisible but still a real
+    clickable element.
+  */
+  background: rgba(255, 0, 0, 0.01);
+
+  border-radius: 999px;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Desktop */
+@media screen and (min-width: 601px) {
+  .poster {
+    width: 100%;
+    max-width: 1024px;
+  }
+}
+
+/* Mobile */
 @media screen and (max-width: 600px) {
 
   html,
   body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin: 0;
     padding: 0;
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
     overflow-x: hidden;
   }
 
   .poster {
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: 100vw;
+    min-width: 0;
     margin: 0;
     padding: 0;
-    overflow: visible;
   }
 
   .poster img {
     display: block;
     width: 100%;
+    max-width: 100%;
     height: auto;
-    max-width: none;
     margin: 0;
     padding: 0;
   }
 
- .contribute-link {
-  position: absolute;
+  .contribute-link {
+    left: 4%;
+    top: 76%;
+    width: 92%;
+    height: 10%;
 
-  left: 5%;
-  top: 77%;
-  width: 90%;
-  height: 7.5%;
-
-  display: block;
-  z-index: 10;
-
-  border-radius: 999px;
-
-  text-decoration: none;
-  cursor: pointer;
-
-  background: rgba(255, 0, 0, 0.01);
+    z-index: 9999;
+    pointer-events: auto;
+    touch-action: manipulation;
   }
 }
 </style>
@@ -113,7 +149,8 @@ body {
   href="https://tally.so/r/7R0ZPz"
   target="_blank"
   rel="noopener noreferrer"
-  aria-label="Contribute for Ganeshotsav">
+  aria-label="Contribute for Ganeshotsav"
+  title="Contribute for Ganeshotsav">
   </a>
 
 </main>
