@@ -2,64 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<meta name="viewport"
+      content="width=device-width,
+               initial-scale=1,
+               maximum-scale=1,
+               viewport-fit=cover">
+
 <title>Prestige Elysian Ganeshotsav 2026</title>
-<meta name="theme-color" content="#6f0d17">
+
+<meta name="theme-color" content="#2b080b">
+
 <style>
-  * { box-sizing: border-box; }
-  html, body { margin:0; padding:0; background:#2b080b; }
-  body { overflow-x:hidden; }
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-width: 0;
+    background: #2b080b;
+    overflow-x: hidden;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
   .poster {
-    position:relative;
-    width:100%;
-    max-width:1024px;
-    margin:0 auto;
-    line-height:0;
-    background:#2b080b;
+    position: relative;
+
+    /* Never wider than the device */
+    width: min(1024px, 100vw);
+    max-width: 1024px;
+
+    margin: 0 auto;
+    padding: 0;
+
+    line-height: 0;
+    background: #2b080b;
+
+    overflow: hidden;
   }
+
   .poster img {
-    display:block;
-    width:100%;
-    height:auto;
-    user-select:none;
-    -webkit-user-drag:none;
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    user-select: none;
+    -webkit-user-drag: none;
   }
+
+  /*
+    Transparent clickable area over
+    the CONTRIBUTION button in the artwork.
+  */
   .contribute-link {
-    position:absolute;
-    left:6.0%;
-    top:78.0%;
-    width:88.0%;
-    height:6.8%;
-    display:block;
-    border-radius:999px;
-    text-decoration:none;
-    cursor:pointer;
-    /* Keep the artwork visible; only a subtle interaction glow appears on hover. */
-    background:transparent;
-    transition:filter .2s ease, transform .2s ease;
+    position: absolute;
+
+    left: 6%;
+    top: 78%;
+
+    width: 88%;
+    height: 6.8%;
+
+    display: block;
+
+    border-radius: 999px;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    background: transparent;
+
+    transition:
+      filter .2s ease,
+      transform .2s ease;
   }
+
   .contribute-link:hover {
-    filter:brightness(1.08);
-    transform:scale(1.005);
+    filter: brightness(1.08);
+    transform: scale(1.005);
   }
+
+  .contribute-link:active {
+    transform: scale(.99);
+  }
+
   .contribute-link:focus-visible {
-    outline:3px solid #ffd66b;
-    outline-offset:4px;
+    outline: 3px solid #ffd66b;
+    outline-offset: 4px;
   }
-  @media (max-width:600px) {
-    .contribute-link { top:78.0%; height:6.8%; }
+
+  /*
+    MOBILE
+  */
+  @media screen and (max-width: 600px) {
+
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .poster {
+      width: 100vw;
+      max-width: 100vw;
+      margin: 0 auto;
+    }
+
+    .poster img {
+      width: 100vw;
+      max-width: 100vw;
+      height: auto;
+    }
+
+    .contribute-link {
+      left: 6%;
+      top: 78%;
+      width: 88%;
+      height: 6.8%;
+    }
   }
 </style>
 </head>
+
 <body>
-<main class="poster" aria-label="Prestige Elysian Ganeshotsav 2026">
-  <img src="ganeshotsav-fullpage.png"
-       alt="Prestige Elysian Ganeshotsav 2026 celebration poster">
-  <a class="contribute-link"
-     href="https://tally.so/r/7R0ZPz"
-     target="_blank"
-     rel="noopener"
-     aria-label="Contribute for Ganeshotsav"></a>
+
+<main
+  class="poster"
+  aria-label="Prestige Elysian Ganeshotsav 2026">
+
+  <img
+    src="ganeshotsav-fullpage.png"
+    alt="Prestige Elysian Ganeshotsav 2026 celebration poster">
+
+  <a
+    class="contribute-link"
+    href="https://tally.so/r/7R0ZPz"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contribute for Ganeshotsav">
+  </a>
+
 </main>
+
 </body>
 </html>
