@@ -3,7 +3,9 @@
 <head>
 <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover">
+
 <title>Prestige Elysian Ganeshotsav 2026</title>
 
 <meta name="theme-color" content="#2b080b">
@@ -43,27 +45,29 @@ body {
   height: auto;
   margin: 0;
   padding: 0;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
-/* ================================
-   CONTRIBUTION CLICK AREA
-   ================================ */
+
+/* =========================================
+   GANESHOTSAV CONTRIBUTION BUTTON
+   ========================================= */
 
 .contribute-link {
   position: absolute;
 
   /*
-    This is positioned over the
-    CONTRIBUTION button in the artwork.
+     Contribution button location
   */
-  left: 4%;
-  top: 76%;
-  width: 92%;
-  height: 10%;
+  left: 5%;
+  top: 76.5%;
+  width: 90%;
+  height: 8.5%;
 
   display: block;
 
-  z-index: 9999;
+  z-index: 99999;
 
   cursor: pointer;
   pointer-events: auto;
@@ -72,25 +76,28 @@ body {
   text-decoration: none;
 
   /*
-    Almost invisible but still a real
-    clickable element.
+     TEMPORARILY SLIGHTLY VISIBLE
+     so we can confirm the click area.
   */
-  background: rgba(255, 0, 0, 0.01);
+  background: rgba(255, 0, 0, 0.03);
 
   border-radius: 999px;
 
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Desktop */
-@media screen and (min-width: 601px) {
-  .poster {
-    width: 100%;
-    max-width: 1024px;
-  }
+/*
+   When user taps it
+*/
+.contribute-link:active {
+  background: rgba(255, 255, 255, 0.08);
 }
 
-/* Mobile */
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
 @media screen and (max-width: 600px) {
 
   html,
@@ -106,33 +113,30 @@ body {
   .poster {
     width: 100vw;
     max-width: 100vw;
-    min-width: 0;
     margin: 0;
     padding: 0;
   }
 
   .poster img {
     display: block;
-    width: 100%;
-    max-width: 100%;
+    width: 100vw;
+    max-width: 100vw;
     height: auto;
     margin: 0;
     padding: 0;
   }
 
   .contribute-link {
-    left: 4%;
+    left: 3%;
     top: 76%;
-    width: 92%;
-    height: 10%;
-
-    z-index: 9999;
-    pointer-events: auto;
-    touch-action: manipulation;
+    width: 94%;
+    height: 9%;
+    z-index: 99999;
   }
 }
 </style>
 </head>
+
 
 <body>
 
@@ -144,16 +148,39 @@ body {
     src="ganeshotsav-fullpage.png"
     alt="Prestige Elysian Ganeshotsav 2026 celebration poster">
 
+
+  <!-- CLICKABLE CONTRIBUTION AREA -->
+
   <a
+    id="contributeButton"
     class="contribute-link"
-  href="https://tally.so/r/7R0ZPz"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Contribute for Ganeshotsav"
-  title="Contribute for Ganeshotsav">
+    href="https://tally.so/r/7R0ZPz"
+    aria-label="Contribute for Ganeshotsav"
+    title="Contribute for Ganeshotsav">
   </a>
 
 </main>
+
+
+<script>
+
+/*
+   Extra mobile-safe click handler.
+   This makes the entire contribution area
+   navigate directly to the Tally form.
+*/
+
+document
+  .getElementById("contributeButton")
+  .addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    window.location.href = "https://tally.so/r/7R0ZPz";
+
+  });
+
+</script>
 
 </body>
 </html>
