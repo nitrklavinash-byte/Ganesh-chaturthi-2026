@@ -101,31 +101,48 @@ margin-right: auto;
 /* MOBILE */
 @media screen and (max-width: 600px) {
 
-  html,
+   html,
   body {
     margin: 0;
     padding: 0;
     width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    overflow-x: hidden;
+    height: 100%;
+    overflow: hidden;
     background: #2b080b;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
   }
 
   .poster {
     position: relative;
-    width: 100%;
-    max-width: 100%;
+
+    width: 100vw;
+    height: 100dvh;
+
+    max-width: none;
+
     margin: 0;
     padding: 0;
+
     overflow: hidden;
+    background: #2b080b;
   }
 
   .poster img {
     display: block;
+
     width: 100%;
-    height: auto;
+    height: 100%;
+
     max-width: none;
+
+    object-fit: cover;
+    object-position: center top;
+
     margin: 0;
     padding: 0;
   }
