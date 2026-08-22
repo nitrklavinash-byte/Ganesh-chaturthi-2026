@@ -57,9 +57,6 @@ body {
 .contribute-link {
   position: absolute;
 
-  /*
-     Contribution button location
-  */
   left: 5%;
   top: 76.5%;
   width: 90%;
@@ -75,10 +72,6 @@ body {
 
   text-decoration: none;
 
-  /*
-     TEMPORARILY SLIGHTLY VISIBLE
-     so we can confirm the click area.
-  */
   background: rgba(255, 0, 0, 0.03);
 
   border-radius: 999px;
@@ -86,9 +79,6 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
-/*
-   When user taps it
-*/
 .contribute-link:active {
   background: rgba(255, 255, 255, 0.08);
 }
@@ -131,6 +121,7 @@ body {
     top: 76%;
     width: 94%;
     height: 9%;
+
     z-index: 99999;
   }
 }
@@ -149,6 +140,7 @@ body {
     src="ganeshotsav-fullpage.png"
     alt="Prestige Elysian Ganeshotsav 2026 celebration poster">
 
+
   <!-- CLICKABLE CONTRIBUTION AREA -->
   <a
     id="contributeButton"
@@ -160,21 +152,20 @@ body {
     title="Contribute for Ganeshotsav">
   </a>
 
+
   <!-- ECO-FRIENDLY GANESHA WORKSHOP POSTER -->
   <img
     class="eco-poster"
     src="eco-ganesha-workshop-2026.png"
     alt="Make Your Own Eco Friendly Ganesha 2026">
-  
+
 </main>
 
 
 <script>
 
 /*
-   Extra mobile-safe click handler.
-   This makes the entire contribution area
-   navigate directly to the Tally form.
+   Mobile-safe contribution button
 */
 
 document
@@ -188,32 +179,6 @@ document
   });
 
 </script>
-        <!-- ECO-FRIENDLY GANESHA WORKSHOP POSTER -->
-
-  <img
-    class="eco-poster"
-    src="eco-ganesha-workshop-2026.png"
-    alt="Make Your Own Eco Friendly Ganesha 2026">
-
-</main>
-
-
-<script>
-
-document
-  .getElementById("contributeButton")
-  .addEventListener("click", function(event) {
-
-    event.preventDefault();
-
-    window.location.href = "https://tally.so/r/7R0ZPz";
-
-  });
-
-</script>
-
-</body>
-</html>
 
 </body>
 </html>
