@@ -144,21 +144,28 @@ body {
   class="poster"
   aria-label="Prestige Elysian Ganeshotsav 2026">
 
+  <!-- MAIN GANESHOTSAV POSTER -->
   <img
     src="ganeshotsav-fullpage.png"
     alt="Prestige Elysian Ganeshotsav 2026 celebration poster">
 
-
   <!-- CLICKABLE CONTRIBUTION AREA -->
-
   <a
     id="contributeButton"
     class="contribute-link"
     href="https://tally.so/r/7R0ZPz"
+    target="_blank"
+    rel="noopener noreferrer"
     aria-label="Contribute for Ganeshotsav"
     title="Contribute for Ganeshotsav">
   </a>
 
+  <!-- ECO-FRIENDLY GANESHA WORKSHOP POSTER -->
+  <img
+    class="eco-poster"
+    src="eco-ganesha-workshop-2026.png"
+    alt="Make Your Own Eco Friendly Ganesha 2026">
+  
 </main>
 
 
@@ -181,6 +188,32 @@ document
   });
 
 </script>
+        <!-- ECO-FRIENDLY GANESHA WORKSHOP POSTER -->
+
+  <img
+    class="eco-poster"
+    src="eco-ganesha-workshop-2026.png"
+    alt="Make Your Own Eco Friendly Ganesha 2026">
+
+</main>
+
+
+<script>
+
+document
+  .getElementById("contributeButton")
+  .addEventListener("click", function(event) {
+
+    event.preventDefault();
+
+    window.location.href = "https://tally.so/r/7R0ZPz";
+
+  });
+
+</script>
+
+</body>
+</html>
 
 </body>
 </html>
