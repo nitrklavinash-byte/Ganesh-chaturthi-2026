@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <title>Mahaprasad Registration | Prestige Elysian Ganeshotsav 2026</title>
+
+  <meta name="theme-color" content="#173d20">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      min-width: 0;
+      background: #102a17;
+      font-family: Georgia, "Times New Roman", serif;
+      color: #302719;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .page {
+      width: 100%;
+      max-width: 1050px;
+      margin: 0 auto;
+      background:
+        linear-gradient(
+          180deg,
+          #173d20 0%,
+          #244c28 30%,
+          #f7efd9 30%,
+          #fffaf0 100%
+        );
+      min-height: 100vh;
+    }
+
+
+    /* =========================================
+       HERO
+       ========================================= */
+
+    .hero {
+      position: relative;
+      padding: 32px 24px 42px;
+      text-align: center;
+      color: #fff4d0;
+      overflow: hidden;
+    }
+
+    .hero:before,
+    .hero:after {
+      content: "✦";
+      position: absolute;
+      top: 35px;
+      font-size: 28px;
+      color: #e5b94f;
+    }
+
+    .hero:before {
+      left: 12%;
+    }
+
+    .hero:after {
+      right: 12%;
+    }
+
+    .brand {
+      font-size: 17px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    .brand span {
+      display: block;
+      font-size: 12px;
+      letter-spacing: 3px;
+      margin-top: 6px;
+      color: #e8c45d;
+    }
+
+    .hero h1 {
+      margin: 14px 0 4px;
+      font-size: clamp(38px, 7vw, 72px);
+      letter-spacing: 3px;
+      color: #f2d27a;
+      text-transform: uppercase;
+    }
+
+    .hero h2 {
+      margin: 0;
+      font-size: clamp(19px, 3vw, 28px);
+      letter-spacing: 5px;
+      color: #fff4d0;
+    }
+
+    .tagline {
+      margin: 18px auto 0;
+      max-width: 650px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    .date-badge {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 30px;
+      border: 2px solid #d7a83d;
+      border-radius: 40px;
+      background: rgba(0,0,0,0.25);
+      color: #ffe7a2;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+
+    /* =========================================
+       MAIN CARD
+       ========================================= */
+
+    .content {
+      margin: -5px 18px 30px;
+      background: #fff9e9;
+      border: 2px solid #d9b85c;
+      border-radius: 28px;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+      padding: 35px 25px 30px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 30px;
+    }
+
+    .intro h3 {
+      margin: 0;
+      color: #28552b;
+      font-size: clamp(25px, 4vw, 36px);
+    }
+
+    .intro p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 14px auto;
+    }
+
+    .highlight {
+      color: #9b6410;
+      font-weight: bold;
+    }
+
+
+    /* =========================================
+       FOOD VISUAL
+       ========================================= */
+
+    .meal {
+      text-align: center;
+      margin: 20px auto 30px;
+    }
+
+    .meal-emoji {
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    .meal-caption {
+      margin-top: 10px;
+      color: #48623b;
+      font-size: 16px;
+      font-style: italic;
+    }
+
+
+    /* =========================================
+       FORM
+       ========================================= */
+
+    .form-card {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 25px;
+      background: #fffdf5;
+      border: 1px solid #d9bd69;
+      border-radius: 22px;
+    }
+
+    .field {
+      margin-bottom: 22px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+      color: #29472c;
+    }
+
+    .required {
+      color: #a42b20;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid #d5bd7b;
+      border-radius: 12px;
+      background: #fffdf7;
+      color: #302719;
+      font-size: 16px;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #64843e;
+      box-shadow: 0 0 0 3px rgba(100,132,62,0.12);
+    }
+
+    .members {
+      background: #f1f1d9;
+      padding: 18px;
+      border-radius: 16px;
+      border: 1px solid #c9ca8a;
+    }
+
+    .members input {
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .help {
+      margin-top: 7px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #59624f;
+      line-height: 1.4;
+    }
+
+
+    /* =========================================
+       REGISTER BUTTON
+       ========================================= */
+
+    .register-button {
+      width: 100%;
+      margin-top: 8px;
+      padding: 17px 20px;
+      border: 2px solid #d4a942;
+      border-radius: 40px;
+      background: #285c24;
+      color: #fff7dc;
+      font-size: 19px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      box-shadow: 0 5px 12px rgba(0,0,0,0.18);
+    }
+
+    .register-button:hover {
+      background: #34752e;
+    }
+
+    .register-button:active {
+      transform: translateY(1px);
+    }
+
+
+    /* =========================================
+       IMPORTANT NOTE
+       ========================================= */
+
+    .note {
+      max-width: 720px;
+      margin: 25px auto;
+      padding: 18px;
+      text-align: center;
+      border-radius: 15px;
+      background: #f7f0d9;
+      border: 1px solid #dfc87d;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .note strong {
+      color: #285c24;
+    }
+
+
+    /* =========================================
+       BACK BUTTON
+       ========================================= */
+
+    .back {
+      text-align: center;
+      margin: 25px 0 5px;
+    }
+
+    .back a {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid #b9963f;
+      border-radius: 30px;
+      color: #5c4314;
+      text-decoration: none;
+      background: #fff8df;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+    }
+
+    .back a:hover {
+      background: #f4e7b9;
+    }
+
+
+    /* =========================================
+       FOOTER
+       ========================================= */
+
+    footer {
+      padding: 28px 20px 35px;
+      text-align: center;
+      color: #f1d47e;
+      background: #173d20;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 1.8;
+    }
+
+    .blessings {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+
+    /* =========================================
+       MOBILE
+       ========================================= */
+
+    @media screen and (max-width: 600px) {
+
+      .hero {
+        padding: 25px 16px 35px;
+      }
+
+      .brand {
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .hero h1 {
+        font-size: 39px;
+        letter-spacing: 1px;
+      }
+
+      .hero h2 {
+        font-size: 18px;
+        letter-spacing: 3px;
+      }
+
+      .tagline {
+        font-size: 16px;
+      }
+
+      .content {
+        margin: -5px 10px 20px;
+        padding: 28px 14px 25px;
+        border-radius: 22px;
+      }
+
+      .form-card {
+        padding: 18px;
+      }
+
+      .meal-emoji {
+        font-size: 58px;
+      }
+
+      .register-button {
+        font-size: 17px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+<div class="page">
+
+
+  <!-- =========================================
+       HERO
+       ========================================= -->
+
+  <section class="hero">
+
+    <div class="brand">
+      PRESTIGE ELYSIAN
+      <span>PRESENTS</span>
+    </div>
+
+    <h1>MAHAPRASAD</h1>
+
+    <h2>REGISTRATION</h2>
+
+    <div class="tagline">
+      🌺 Together in devotion, united in Prasad 🌺
+      <br>
+      Bappa's blessings are meant to be shared with everyone.
+    </div>
+
+    <div class="date-badge">
+      🙏 VISARJAN DAY — 16 SEPT 2026 🙏
+    </div>
+
+  </section>
+
+
+  <!-- =========================================
+       MAIN CONTENT
+       ========================================= -->
+
+  <section class="content">
+
+
+    <div class="intro">
+
+      <h3>
+        Let's plan together for a
+        <span class="highlight">
+          SATHVIK &amp; DELICIOUS MAHAPRASAD
+        </span>
+      </h3>
+
+      <p>
+        Please help us by registering the number of family members
+        attending so we can prepare Mahaprasad with love and care.
+      </p>
+
+    </div>
+
+
+    <div class="meal">
+
+      <div class="meal-emoji">
+        🍚 🥘 🫓 🍮
+      </div>
+
+      <div class="meal-caption">
+        Prepared with devotion • Served with love • Shared with everyone
+      </div>
+
+    </div>
+
+
+    <!-- =========================================
+         REGISTRATION FORM
+         ========================================= -->
+
+    <div class="form-card">
+
+      <form id="mahaprasadForm">
+
+
+        <div class="field">
+
+          <label for="flat">
+            FLAT NUMBER <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="flat"
+            name="flat"
+            placeholder="Enter your flat number"
+            required>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="name">
+            RESIDENT NAME <span class="required">*</span>
+          </label>
+
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter resident name"
+            required>
+
+        </div>
+
+
+        <div class="field">
+
+          <label for="mobile">
+            MOBILE NUMBER
+            <span style="font-weight:normal;">
+              (OPTIONAL)
+            </span>
+          </label>
+
+          <input
+            type="tel"
+            id="mobile"
+            name="mobile"
+            placeholder="Enter mobile number">
+
+        </div>
+
+
+        <div class="field members">
+
+          <label for="members">
+            NUMBER OF FAMILY MEMBERS ATTENDING
+            <span class="required">*</span>
+          </label>
+
+          <input
+            type="number"
+            id="members"
+            name="members"
+            min="1"
+            max="20"
+            placeholder="Enter total number"
+            required>
+
+          <div class="help">
+            Please enter the total number of family members
+            who will have Mahaprasad.
+          </div>
+
+        </div>
+
+
+        <button
+          type="submit"
+          class="register-button">
+
+          🍲 &nbsp; REGISTER FOR MAHAPRASAD
+
+        </button>
+
+
+      </form>
+
+    </div>
+
+
+    <div class="note">
+
+      🙏 <strong>No donation is required for Mahaprasad registration.</strong>
+
+      <br>
+
+      This registration is only to help us plan the quantity
+      of Prasadam so that everyone can be served comfortably.
+
+    </div>
+
+
+    <!-- =========================================
+         BACK TO MAIN PAGE
+         ========================================= -->
+
+    <div class="back">
+
+      <a href="live.html">
+
+        ← BACK TO GANESHOTSAV
+
+      </a>
+
+    </div>
+
+
+  </section>
+
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+
+  <footer>
+
+    <div class="blessings">
+      🌺 GANPATI BAPPA MORYA 🌺
+    </div>
+
+    MANGALMURTI MORYA
+    &nbsp; • &nbsp;
+    PUDHCHA VARSHI LAVKAR YA
+
+  </footer>
+
+
+</div>
+
+
+<script>
+
+  /*
+    Registration will be connected to the
+    Google Sheet in the next step.
+  */
+
+  document
+    .getElementById("mahaprasadForm")
+    .addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert(
+        "🙏 Thank you! Your Mahaprasad registration has been received."
+      );
+
+    });
+
+</script>
+
+</body>
+
+</html>
